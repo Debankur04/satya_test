@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL_PG")
+}
+
+model User {
+  id             String  @id @default(uuid())
+  name           String
+  email          String  @unique
+  profilePicture String?
+  reports        ReportedCase[]
+  quizScores     QuizScore[]
+  verifiedCases  FactCheckLog[] // Tracks cases verified by the admin
+  createdAt      DateTime @default(now())
+}
+
+model ReportedCase {
+  id             String        @id @default(uuid())
+  user           User         @relation(fields: [userId], references: [id])
+  userId         String
+  url            String
+  reportReason   String
+  status         String       @default("Pending") // Pending, Verified, Rejected
+  adminResponse  String?
+  factCheckLog   FactCheckLog?
+  reportedAt     DateTime     @default(now())
+}
+
+model FactCheckLog {
+  id               String       @id @default(uuid())
+  reportedCase     ReportedCase @relation(fields: [reportedCaseId], references: [id])
+  reportedCaseId   String       @unique // Enforces one-to-one relation
+  verifiedBy       User         @relation(fields: [verifiedById], references: [id])
+  verifiedById     String
+  credibilityScore Int          @default(50) // Score between 0-100
+  sourcesUsed      String
+  verifiedAt       DateTime     @default(now())
+}
+
+model QuizScore {
+  id        String  @id @default(uuid())
+  user      User    @relation(fields: [userId], references: [id])
+  userId    String
+  quizTopic String
+  score     Int
+  completedAt DateTime @default(now())
+}
+
