@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --primary: #1DB954;
     --secondary: #212121;
@@ -194,4 +195,202 @@ nav a.active:after {
     background: var(--primary);
     border: none;
     color: white;
+=======
+:root{
+    --primary: #1DB954;
+    --secondary: #212121;
+    --third : #121212;
+    --forth : #535353;
+    --fifth : #B3B3B3;
+}
+
+.container{      
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem;
+background: var(--fifth);
+}
+
+header {
+text-align: center;
+margin-bottom: 3rem;
+}
+
+header h1 {
+font-size: 2.5rem;
+color: var(--secondary);
+margin-bottom: 0.5rem;
+}
+
+section {
+margin-bottom: 4rem;
+}
+
+section h2 {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+margin-bottom: 2rem;
+color: var(--secondary);
+}
+
+.partners-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+}
+
+.partner-card {
+background: white;
+padding: 1.5rem;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.partner-card img {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 50%;
+margin-bottom: 1rem;
+}
+
+.api-status {
+display: inline-block;
+padding: 0.25rem 0.75rem;
+background: #e6ffe6;
+color: #006600;
+border-radius: 20px;
+font-size: 0.875rem;
+}
+
+.integration-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+
+.integration-card {
+background: #f8f9fa;
+padding: 2rem;
+border-radius: 10px;
+text-align: center;
+}
+
+.integration-card h3 {
+margin: 1rem 0;
+color: var(--secondary);
+}
+
+.partnership-form {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+label {
+display: block;
+margin-bottom: 0.5rem;
+color: var(--secondary);
+}
+
+input, textarea {
+width: 100%;
+padding: 0.75rem;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 1rem;
+}
+
+textarea {
+height: 150px;
+resize: vertical;
+}
+
+button {
+background: var(--primary);
+color: white;
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+button:hover {
+background: #1db954c4;
+}
+
+@media (max-width: 768px) {
+.container {
+padding: 1rem;
+}
+
+.partners-grid,
+.integration-cards {
+grid-template-columns: 1fr;
+}
+}
+.header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--third);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--fifth);
+    position: relative;
+}
+
+nav a.active:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: none;
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+.signup-btn {
+    background: var(--primary);
+    border: none;
+    color: white;
+>>>>>>> 77e3ee8 (Backend Fix)
 }

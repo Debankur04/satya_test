@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --primary: #1DB954;
     --secondary: #212121;
@@ -340,4 +341,348 @@ nav a.active:after {
     background: var(--primary);
     border: none;
     color: white;
+=======
+:root{
+    --primary: #1DB954;
+    --secondary: #212121;
+    --third : #121212;
+    --forth : #535353;
+    --fifth : #B3B3B3;
+}
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem;
+}
+
+.tabs {
+display: flex;
+gap: 1rem;
+margin-bottom: 2rem;
+}
+
+.tab {
+padding: 0.75rem 1.5rem;
+border: none;
+border-radius: 5px;
+background: #f5f5f5;
+cursor: pointer;
+}
+
+.tab.active {
+background: var(--primary);
+color: white;
+}
+
+.quiz-header {
+display: flex;
+justify-content: space-between;
+margin-bottom: 2rem;
+}
+
+.timer, .score {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.5rem 1rem;
+background: #f5f5f5;
+border-radius: 5px;
+}
+
+.options {
+display: grid;
+gap: 1rem;
+margin: 2rem 0;
+}
+
+.option {
+padding: 1rem;
+border: 2px solid #ddd;
+border-radius: 5px;
+background: white;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.option.correct {
+border-color: #4CAF50;
+background: #e8f5e9;
+}
+
+.option.wrong {
+border-color: #FF5252;
+background: #ffebee;
+}
+
+.explanation {
+padding: 1rem;
+background: #f5f5f5;
+border-radius: 5px;
+margin: 1rem 0;
+}
+
+.reset-button {
+width: 100%;
+padding: 1rem;
+background: var(--primary);
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.podium {
+display: flex;
+flex-direction: column-reverse;
+gap: 0.5rem;
+margin-top: 2rem;
+}
+
+.podium-step {
+display: flex;
+align-items: center;
+gap: 1rem;
+padding: 1rem;
+background: #f5f5f5;
+border-radius: 5px;
+margin-left: calc(var(--rank) * 2rem);
+}
+
+.rank-1 {
+--rank: 6;
+background: #ffd700;
+}
+
+.rank-2 {
+--rank: 5;
+background: #c0c0c0;
+}
+
+.rank-3 {
+--rank: 4;
+background: #cd7f32;
+}
+
+.rank-4 { --rank: 3; }
+.rank-5 { --rank: 2; }
+.rank-6 { --rank: 1; }
+.rank-7 { --rank: 0; }
+
+.star {
+color: white;
+}
+
+@media (max-width: 600px) {
+.podium-step {
+margin-left: calc(var(--rank) * 1rem);
+}
+}
+.leaderboard-container {
+padding: 2rem;
+background: white;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-three {
+display: flex;
+justify-content: center;
+align-items: flex-end;
+gap: 1rem;
+margin-bottom: 2rem;
+height: 300px;
+}
+
+.podium-place {
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+}
+
+.player-info {
+text-align: center;
+gap: 15px;
+margin-bottom: 1rem;
+}
+
+.platform {
+width: 100px;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+}
+
+.first {
+z-index: 3;
+.platform {
+    height: 200px;
+    background: #ffd700;
+}
+.medal { color: #ffd700; }
+}
+
+.second {
+z-index: 2;
+.platform {
+    height: 150px;
+    background: #c0c0c0;
+}
+.medal { color: #c0c0c0; }
+}
+
+.third {
+z-index: 1;
+.platform {
+    height: 100px;
+    background: #cd7f32;
+}
+.medal { color: #cd7f32; }
+}
+
+.medal {
+margin-bottom: 0.5rem;
+}
+
+.other-ranks {
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.rank-item {
+display: flex;
+align-items: center;
+padding: 1rem;
+background: #f5f5f5;
+border-radius: 5px;
+}
+
+.rank-number {
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #ddd;
+border-radius: 50%;
+margin-right: 1rem;
+}
+
+.username {
+flex: 1;
+padding-right: 8px;
+font-weight: bold;
+}
+
+.points {
+color: #666;
+}
+
+@media (max-width: 600px) {
+.platform {
+    width: 80px;
+}
+
+.first .platform { height: 160px; }
+.second .platform { height: 120px; }
+.third .platform { height: 80px; }
+}
+.next-button, .submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .next-button:hover, .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  .reset-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-button:hover {
+    background-color: #da190b;
+  }
+  
+  .next-button:disabled, .submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--third);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--fifth);
+    position: relative;
+}
+
+nav a.active:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: none;
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+.signup-btn {
+    background: var(--primary);
+    border: none;
+    color: white;
+>>>>>>> 77e3ee8 (Backend Fix)
 }

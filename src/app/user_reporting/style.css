@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
   --primary: #1DB954;
   --secondary: #212121;
@@ -200,4 +201,208 @@
       background: var(--primary);
       border: none;
       color: white;
+=======
+:root{
+  --primary: #1DB954;
+  --secondary: #212121;
+  --third : #121212;
+  --forth : #535353;
+  --fifth : #B3B3B3;
+}
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+    }
+
+    .report-form {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    .input-group input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+    }
+
+    .file-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .upload-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border: 2px dashed #ddd;
+      border-radius: 5px;
+      background: none;
+      cursor: pointer;
+    }
+
+    .flag-button {
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: #ff4444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .flag-button:hover {
+      background: #cc0000;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      max-width: 400px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .modal-icon {
+      color: #ff4444;
+      margin-bottom: 1rem;
+    }
+
+    .past-reports {
+      margin-top: 2rem;
+    }
+
+    .reports-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .report-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background: #f5f5f5;
+      border-radius: 5px;
+    }
+
+    .report-item.fake .report-status {
+      color: #ff4444;
+    }
+
+    .report-item.true .report-status {
+      color: #4CAF50;
+    }
+
+    .report-date {
+      color: #666;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 480px) {
+      .file-inputs {
+        grid-template-columns: 1fr;
+      }
+    }
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--third);
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      font-size: 1.25rem;
+  }
+  
+  nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+  
+  nav a {
+      text-decoration: none;
+      color: var(--fifth);
+      position: relative;
+  }
+  
+  nav a.active:after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+  }
+  
+  .login-btn, .signup-btn {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  .login-btn {
+      background: none;
+      border: 1px solid var(--primary);
+      color: white;
+  }
+  
+  .signup-btn {
+      background: var(--primary);
+      border: none;
+      color: white;
+>>>>>>> 77e3ee8 (Backend Fix)
   }
